@@ -1,0 +1,150 @@
+body {
+  font-family: Arial, sans-serif;
+  background-image: url('../images/pexels-mark-stebnicki-2749165.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 100vh;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: -1;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.form-container {
+  background-color: #4d614bd0;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 1;
+  margin-top:200px; 
+  margin-left: 150px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.hth-container {
+  display: flex;
+  justify-content: center;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: whitesmoke;
+}
+
+.crop-form .input-group {
+  margin-bottom: 15px;
+}
+
+.crop-form label {
+  display: block;
+  margin-bottom: 5px;
+  color: whitesmoke;
+}
+
+.crop-form input[type="number"] {
+  width: calc(100% - 10px);
+  padding: 8px;
+  border: 1px solid #a2a191;
+  border-radius: 5px;
+}
+
+.button-container button[type="submit"] {
+  background-color: #916552;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.crop-form button[type="submit"]:hover {
+  background-color: #69433C;
+}
+
+.result-area {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 20px;
+  width: 80%; 
+  margin-left: auto; 
+  margin-right: auto;
+}
+
+.result-area h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.menu {
+  position: absolute;
+  right: 20px;
+  top: 20px; 
+  z-index: 2;
+  margin-top: 10px;
+  margin-right: 50px;
+}
+
+.menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu ul li {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.menu ul li:first-child {
+  margin-left: 0;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.menu ul :hover {
+  color: #869c53;
+  transform: scale(1.1);
+}
+
+
+
+
+
+
+
+  
+  
