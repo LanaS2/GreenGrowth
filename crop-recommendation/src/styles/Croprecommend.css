@@ -39,6 +39,7 @@ body::before {
   z-index: 1;
   margin-top:200px; 
   margin-left: 150px;
+  margin-bottom: 120px;
 }
 
 .button-container {
@@ -87,23 +88,6 @@ h2 {
 .crop-form button[type="submit"]:hover {
   background-color: #69433C;
 }
-
-.result-area {
-  background-color: rgba(255, 255, 255, 0.8);
-  border-radius: 10px;
-  padding: 20px;
-  margin-top: 20px;
-  width: 80%; 
-  margin-left: auto; 
-  margin-right: auto;
-}
-
-.result-area h3 {
-  font-size: 20px;
-  margin-bottom: 10px;
-  color: #333;
-}
-
 .menu {
   position: absolute;
   right: 20px;
@@ -139,7 +123,77 @@ h2 {
   color: #869c53;
   transform: scale(1.1);
 }
+.processing-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(45, 44, 44, 0.366); 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999; 
+}
 
+.processing-spinner {
+  border: 4px solid rgba(0, 0, 0, 0.1); 
+  border-top: 4px solid #3498db; 
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite; 
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.result-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999; 
+}
+
+.result-rectangle {
+  background-color: #9f7a69;
+  border: 2px;
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 80%;
+  text-align: center;
+  position: relative;
+  height:300px;
+  width: 300px;
+  margin-top: 100px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  color: rgb(255, 8, 8);
+}
+
+.result-rectangle h2 {
+  margin-bottom: 10px;
+  color: rgb(233, 224, 207);
+}
+
+.result-rectangle p {
+  color: rgb(222, 212, 194);
+  font-size: 18px;
+  line-height: 1.5;
+}
 
 
 

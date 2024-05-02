@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import '../styles/Croprecommend.css';
 import Menu from './Menu';
-
+import { FaTimes } from 'react-icons/fa'; 
 
 const FormComponent = ({ onSubmit }) => {
   const [formData, setFormData] = useState({
@@ -14,6 +14,10 @@ const FormComponent = ({ onSubmit }) => {
     rainfall: ''
   });
 
+  const [result, setResult] = useState(null); 
+  const [showResult, setShowResult] = useState(false); 
+  const [processing, setProcessing] = useState(false); 
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData(prevState => ({
@@ -24,17 +28,25 @@ const FormComponent = ({ onSubmit }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setProcessing(true); 
     setTimeout(() => {
-      const resultArea = document.getElementById('result-area');
-      resultArea.scrollIntoView({ behavior: 'smooth' });
-    }, 100);
+      const fakeResult = "apple"; 
+      setResult(fakeResult);
+      setShowResult(true); 
+      setProcessing(false); 
+    }, 2500); 
+  };
+
+  const handleCloseResult = () => {
+    setShowResult(false);
+    setResult(null); 
   };
 
   return (
     <div className="container">
       <header>
         <Menu />
-        </header>
+      </header>
       <div className="form-container">
         <div className="hth-container">
           <h2>Share your land info and let's make it thrive!</h2>
@@ -73,9 +85,25 @@ const FormComponent = ({ onSubmit }) => {
           </div>
         </form>
       </div>
-      <div className="result-area">
-        <h3>Based on your input, the best plant to grow is:</h3>
-      </div>
+      {/* Processing effect */}
+      {processing && (
+        <div className="processing-overlay">
+          <div className="processing-spinner"></div>
+          <p>Processing...</p>
+        </div>
+      )}
+      {/* Result display */}
+      {result && (
+        <div className="result-container">
+          <div className="result-rectangle">
+            <button className="close-btn" onClick={handleCloseResult}>
+              <FaTimes />
+            </button>
+            <h2>Result</h2>
+            <p>{result}</p>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import '../styles/disease.css';
 import Menu from './Menu';
+import { FaTimes } from 'react-icons/fa'; 
 
 function Disease() {
   const [uploadedImage, setUploadedImage] = useState(null);
   const [processing, setProcessing] = useState(false);
+  const [result, setResult] = useState(null);
 
   const handleImageUpload = (event) => {
     const file = event.target.files[0];
@@ -18,11 +20,16 @@ function Disease() {
   };
 
   const handleDetect = () => {
-    
     setProcessing(true);
     setTimeout(() => {
+      const fakeResult = "Healthy"; // Replace this with  actual detection result
+      setResult(fakeResult);
       setProcessing(false);
     }, 2500); 
+  };
+
+  const handleCloseResult = () => {
+    setResult(null);
   };
 
   return (
@@ -50,6 +57,17 @@ function Disease() {
         <div className={`uploaded-image-container ${processing ? 'processing' : ''}`}>
           <img src={uploadedImage} alt="Uploaded" className="uploaded-image" />
           {processing && <div className="processing-overlay"></div>}
+        </div>
+      )}
+      {result && (
+        <div className="result-container">
+          <div className="result-rectangle">
+            <button className="close-btn" onClick={handleCloseResult}>
+              <FaTimes />
+            </button>
+            <h2>Result</h2>
+            <p>{result}</p>
+          </div>
         </div>
       )}
     </div>

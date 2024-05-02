@@ -20,7 +20,7 @@ const HomePage = () => {
     setTimeout(() => {
       const servicesSection = document.getElementById('sercont');
       servicesSection.scrollIntoView({ behavior: 'smooth' });
-    }, 100); 
+    },); 
   };
   
 
