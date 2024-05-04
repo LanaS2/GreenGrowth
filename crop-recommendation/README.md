@@ -8,7 +8,18 @@ This application combines the functionalities of a crop recommendation system an
 
 ## Usage
 Welcome to Green Growth! Below, you'll find a guide on how to navigate and use the platform. Please note that certain features are for all users. 
+### 1. Home Page
+-The home page welcomes users to green growth
+-Users can scroll down into srevices and select any service
+### 2.CropRecommend Page 
+- Users should fill the info as shown in the video , then the system using ml will display the best crop type to plant.
+- [![Click to watch the video](https://img.youtube.com/vi/Mbx-DivWiMo/0.jpg)](https://youtu.be/Mbx-DivWiMo)
 
+### 3.Disease Detection Page
+- User should upload the image of his plant (leaf part) and click detect , then the system will analyze it and display the result Healty or illnes (with the name of the diseas if possible)
+### 4. My Garden Calendar
+- here user can manege his garden tasks as Irrigation, Fertilization and so on .
+  
 ### `npm start`
 
 Runs the app in the development mode.\
