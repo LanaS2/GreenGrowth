@@ -21,7 +21,8 @@ Welcome to Green Growth! Below, you'll find a guide on how to navigate and use t
 
 ### 4. My Garden Calendar
 - here user can manege his garden tasks as Irrigation, Fertilization and so on .
-  
+  ![calendar](https://github.com/LanaS2/GreenGrowth/raw/main/Screenshot%202024-05-04%20134033.png)
+
 ### `npm start`
 
 Runs the app in the development mode.\
