@@ -1,9 +1,9 @@
 import React from 'react';
-import Croprecommend from './pages/HomePage';
+import Calendar from './pages/CroprecommendPage';
 function App() {
   return (
     <div>
-      <Croprecommend/>
+      <Calendar/>
     </div>
   );
 }

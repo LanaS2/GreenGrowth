@@ -91,37 +91,47 @@ h2 {
 .menu {
   position: absolute;
   right: 20px;
-  top: 20px; 
-  z-index: 2;
-  margin-top: 10px;
-  margin-right: 50px;
+  top: 20px;
+  height: 100%;
+  width: 20%;
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+}
+
+.menu.open {
+  background-color: #324f0a72;
+  transition: 0.5s ease-in-out;
 }
 
 .menu ul {
   list-style: none;
-  margin: 0;
   padding: 0;
+  margin: 0;
+  margin-top: 40px;
 }
 
 .menu ul li {
-  display: inline-block;
-  margin-left: 20px;
-}
-
-.menu ul li:first-child {
-  margin-left: 0;
+  margin-bottom: 30px;
 }
 
 .menu ul li a {
   text-decoration: none;
-  color: #fff;
-  font-size: 16px;
+  color: #C0BFC0;
+  font-size: 1em;
+  display: block;
   transition: color 0.3s ease;
 }
 
-.menu ul :hover {
-  color: #869c53;
-  transform: scale(1.1);
+.menu ul li a:hover {
+  color: #729875;
+}
+
+.menu-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
 }
 .processing-overlay {
   position: fixed;

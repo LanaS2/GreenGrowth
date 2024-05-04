@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap");
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -23,34 +24,48 @@ body::before {
 .menu {
   position: absolute;
   right: 20px;
-  top: 20px; 
-  z-index: 2;
-  margin-top: 20px;
-  margin-right: 30px;
-}
-.menu ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-.menu ul li {
-  display: inline-block;
-  margin-left: 20px;
-}
-.menu ul li:first-child {
-  margin-left: 0;
-}
-.menu ul li a {
-  text-decoration: none;
-  color: #4F6F52;
-  font-size: 1em;
-  transition: color 0.3s ease;
-}
-.menu ul :hover {
-  color: #86A789;
-  transform: scale(1.1);
+  top: 20px;
+  height: 100%;
+  width: 25%;
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
 }
 
+.menu.open {
+  background-color: #e2e0e0a2;
+  transition: 0.5s ease-in-out;
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-top: 40px;
+}
+
+.menu ul li {
+  margin-bottom: 30px;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: #446247;
+  font-size: 1em;
+  display: block;
+  transition: color 0.3s ease;
+}
+
+.menu ul li a:hover {
+  color: #86A789;
+}
+
+.menu-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+}
 
 h1 {
   color: #8d7154;
