@@ -10,7 +10,9 @@ This application combines the functionalities of a crop recommendation system an
 Welcome to Green Growth! Below, you'll find a guide on how to navigate and use the platform. Please note that certain features are for all users. 
 ### 1. Home Page
 -The home page welcomes users to green growth
--Users can scroll down into srevices and select any service
+-Users can click get started or scroll down into srevices and select any service
+![home](https://github.com/LanaS2/GreenGrowth/raw/main/home.png)
+
 ### 2.CropRecommend Page 
 - Users should fill the info as shown in the video , then the system using ml will display the best crop type to plant.
 - [![Click to watch the video](https://img.youtube.com/vi/Mbx-DivWiMo/0.jpg)](https://youtu.be/Mbx-DivWiMo)
