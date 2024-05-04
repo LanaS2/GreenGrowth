@@ -17,6 +17,8 @@ Welcome to Green Growth! Below, you'll find a guide on how to navigate and use t
 
 ### 3.Disease Detection Page
 - User should upload the image of his plant (leaf part) and click detect , then the system will analyze it and display the result Healty or illnes (with the name of the diseas if possible)
+  ![disease](https://github.com/LanaS2/GreenGrowth/raw/main/Screenshot%202024-05-04%20133914.png)
+
 ### 4. My Garden Calendar
 - here user can manege his garden tasks as Irrigation, Fertilization and so on .
   
